@@ -8,11 +8,17 @@ Run this command
 
 ```
 git clone https://github.com/ar-android/laravel-docker
+
 cd laravel-docker
+
 cp src/.env.example src/.env
+
 docker-compose run --rm --no-deps blog-server composer install
+
 docker-compose run --rm --no-deps blog-server php artisan key:generate
+
 docker-compose run --rm --no-deps blog-server php artisan migrate
+
 docker-compose up -d
 
 # If you are using docker-machine open the machine ip
